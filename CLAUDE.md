@@ -24,6 +24,7 @@ Single-page Next.js (App Router) portfolio site. There is only one route (`/`), 
 - `src/components/sections/` — one component per page section (`hero.tsx`, `about.tsx`, `projects.tsx`, `experience.tsx`), each importing its data from the matching file in `src/content/`.
 - `src/components/` — `site-header.tsx` (sticky nav with anchor links to section ids) and `site-footer.tsx`.
 - `src/components/ui/` — small shared UI primitives (e.g. `badge.tsx`).
+- `src/components/icons.tsx` — hand-written inline-SVG `GithubIcon`/`LinkedinIcon`. The installed `lucide-react` (v1.x) dropped brand/logo icons, so these aren't importable from `lucide-react` — use `Mail` etc. from `lucide-react` for generic icons, but add new brand icons here.
 - `src/content/*.ts` — all editable site content (profile, about, projects, experience) as typed static data. **This is the primary place to update real information** — there is no CMS or database.
 - `src/types/content.ts` — shared content types (`Profile`, `AboutContent`, `Project`, `Experience`) that the `content/*.ts` files implement.
 - `src/lib/utils.ts` — `cn()` helper (clsx + tailwind-merge) used for conditional class names.
